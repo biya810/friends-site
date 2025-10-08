@@ -13,6 +13,11 @@ let modalText = document.getElementById('modal-text');
 let modalOk = document.getElementById('modal-ok');
 let modalCancel = document.getElementById('modal-cancel');
 
+// ショップモーダル用の変数
+let shopButton = document.getElementById('shop-text');
+let modalShop = document.getElementById('modal-shop');
+let modalShopText = document.getElementById('modal-shop-text');
+
 // クリックカウンター
 myButton.addEventListener('click', function() {
   count += clickPower;
@@ -36,6 +41,12 @@ rebornButton.addEventListener('click', function() {
   modal.classList.remove('hidden');
 });
 
+// ショップボタンをクリックでモーダルを表示
+shopButton.addEventListener('click', function() {
+  modalShop.classList.remove('hidden-shop'); // 表示
+  modalShopText.textContent = "ショップを開きました！"; // テキスト更新
+});
+
 // OKボタン
 modalOk.addEventListener('click', function() {
   let threshold = rebornThresholds[rebornIndex] || Infinity;
@@ -53,4 +64,9 @@ modalOk.addEventListener('click', function() {
 // キャンセル
 modalCancel.addEventListener('click', function() {
   modal.classList.add('hidden');
+});
+
+let modalShopClose = document.getElementById('modal-shop-close');
+modalShopClose.addEventListener('click', function() {
+  modalShop.classList.add('hidden-shop'); // 非表示
 });

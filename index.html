@@ -8,6 +8,12 @@
 </head>
 <body>
   <div id="container">
+      <!-- 左側のショップボックス -->
+  <div id="shop">
+    <button id="shop-text">ショップ</button>
+    <button id="mini-game">ミニゲーム</button>
+  </div>
+
     <h1>クリックカウンター</h1>
     <p>クリック回数: <span id="count">0</span></p>
     <p>クリックパワー: <span id="click-power">1</span></p>
@@ -22,6 +28,20 @@
         <p id="modal-text"></p>
         <button id="modal-ok">OK</button>
         <button id="modal-cancel">キャンセル</button>
+      </div>
+    </div>
+
+  <div id="modal-shop" class="modal-shop hidden-shop">
+   <div class="modal-shop-content">
+    <p id="modal-shop-text"></p>
+    <button id="modal-shop-close">閉じる</button>
+   </div>
+ </div>
+
+      <!-- モーダルショップ -->
+    <div id="modal-shop" class="modal-shop hidden-shop">
+      <div class="modal-shop-content">
+        <p id="modal-shop-text"></p>
       </div>
     </div>
   </div>
