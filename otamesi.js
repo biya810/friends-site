@@ -70,3 +70,36 @@ let modalShopClose = document.getElementById('modal-shop-close');
 modalShopClose.addEventListener('click', function() {
   modalShop.classList.add('hidden-shop'); // 非表示
 });
+
+//ショップボタン１
+let shopone = document.getElementById('shop-one');
+let shoponeCount = 0; // 購入回数を管理
+let nanshopone = document.getElementById('nanshop-one'); // ←これが必要
+
+shopone.addEventListener('click', function() {
+  if (count < 10) {
+    alert("クリック数が足りません！");
+    return;
+  }
+
+  // 10クリックを消費
+  count -= 10;
+  countDisplay.textContent = count;
+
+  // 自動クリック開始（1秒ごとに1増加）
+  setInterval(function() {
+    count += 1;
+    countDisplay.textContent = count;
+
+    if (count === 10) countDisplay.style.color = 'red';
+    if (count === 50) countDisplay.style.color = 'blue';
+    if (count >= 100) countDisplay.style.color = 'green';
+  }, 1000);
+
+
+  // 購入回数を増やす
+  shoponeCount++;
+  nanshopone.textContent = shoponeCount; // ←ここでspanに数字を反映
+});
+
+

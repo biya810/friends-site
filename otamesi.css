@@ -9,39 +9,16 @@ body {
   margin: 0;
 }
 
-#shop {
-  position: fixed;
-  top: 50px;
-  left: 20px;
-  width: 150px;
-  height: 400px;           /* ボックスの高さ */
-  background-color: white;
-  border: 2px solid #333;
-  padding: 40px 20px;      /* 上下40px、左右20px */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  text-align: center;
-}
-
-#shop-text {
-  width: 100%;
-  height: 40px;
-  font-size: 18px;
-  display: flex;           /* フレックスボックスにする */
-  justify-content: center; /* 横方向中央 */
-  align-items: center;     /* 縦方向中央 */
-  cursor: pointer;
-}
-
-#mini-game {
-  width: 100%;           /* 親ボックスいっぱいに広げる */
-  height: 40px;          /* 高さをショップボタンと同じにする */
-  font-size: 18px;
-  display: flex;         /* Flexboxで縦横中央揃え */
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;      /* 上の余白でショップボタンと間をあける */
-  cursor: pointer;
+#midasi {
+  position: fixed;   /* 画面に固定 */
+  top: 0;            /* 上端に配置 */
+  left: 50%;         /* 横中央に配置 */
+  transform: translateX(-50%); /* 左右中央揃え */
+  background-color: white;  /* 背景を白にして下の文字と重ならないように */
+  padding: 5px 10px;        /* 少し余白をつける */
+  z-index: 1000;            /* 他の要素より前面に表示 */
+  font-weight: bold;         /* 好みで太字 */
+  border-bottom: 1px solid #ccc; /* 好みで下線 */
 }
 
 /* コンテナ部分に白い枠を作る */
@@ -100,19 +77,6 @@ button:hover {
   align-items: center;
 }
 
-/* モーダル全体 */
-.modal-shop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* モーダル中央のボックス */
 .modal-content {
   background-color: white;
@@ -121,21 +85,8 @@ button:hover {
   text-align: center;
 }
 
-/* モーダル中央のボックス */
-.modal-shop-content {
-  background-color: white;
-  padding: 30px 50px;
-  border-radius: 15px;
-  text-align: center;
-}
-
 /* 最初は非表示 */
 .hidden {
-  display: none;
-}
-
-/* 最初は非表示 */
-.hidden-shop {
   display: none;
 }
 
@@ -173,23 +124,4 @@ p {
   color: #555555;
 }
 
-/* ボタン共通 */
-button {
-  background-color: #ffffff;
-  color: #333333;
-  border: 2px solid #333333;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin: 5px;
-}
-
-/* ボタンホバー時 */
-button:hover {
-  background-color: #333333;
-  color: #ffffff;
-  border-color: #333333;
-}
 

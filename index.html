@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>クリックカウンター</title>
   <link rel="stylesheet" href="otamesi.css">
+  <link rel="stylesheet" href="container.css">
 </head>
 <body>
+  <p id="midasi">バージョン2</p>
   <div id="container">
       <!-- 左側のショップボックス -->
   <div id="shop">
@@ -34,17 +36,10 @@
   <div id="modal-shop" class="modal-shop hidden-shop">
    <div class="modal-shop-content">
     <p id="modal-shop-text"></p>
+    <button id="shop-one">自動クリック<span id="nanshop-one">0</span></button>
     <button id="modal-shop-close">閉じる</button>
    </div>
  </div>
-
-      <!-- モーダルショップ -->
-    <div id="modal-shop" class="modal-shop hidden-shop">
-      <div class="modal-shop-content">
-        <p id="modal-shop-text"></p>
-      </div>
-    </div>
-  </div>
 
   <script src="otamesi.js" defer></script>
 </body>
